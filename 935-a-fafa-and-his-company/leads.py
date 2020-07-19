@@ -1,13 +1,7 @@
+from itertools import takewhile
+
 n = int(input())
 
-count = 0
-
-i = 1
-while n // i > 1:
-    if n % i == 0:
-        count += 1
-
-    i += 1
-
+count = sum([1 for i in takewhile(lambda i: n // i > 1, range(1, n)) if n % i == 0 ])
 
 print(count)
