@@ -8,28 +8,20 @@ base = len(string.ascii_uppercase)
 
 def to_rx_cy(col, row):
     col_value = 0
-    for i, l in enumerate(col[::-1]):
-        col_value += (1 + string.ascii_uppercase.index(l))*base**i
+    for l in col:
+        col_value = col_value * base + 1 + string.ascii_uppercase.index(l)
     
     return f"R{row}C{col_value}"
 
 
 def to_letters_num(col, row):
-    letters = []
+    letters = ''
     while col > 0:
-        idx = int(col % base)
-        if idx == 0:
-            l = "Z"
-            col -= 1
-        else:
-            l = string.ascii_uppercase[idx - 1]
+        col, idx = divmod(col - 1, base)
 
-        letters.append(l)
-        # print(col, idx, l)
-        col //= base 
+        letters = string.ascii_uppercase[idx] + letters
 
-    col_str = ''.join(letters[::-1])
-    return f"{col_str}{row}"
+    return f"{letters}{row}"
 
 
 def get_format(value):
