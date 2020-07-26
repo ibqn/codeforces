@@ -18,9 +18,3 @@ gen = (
 winner = next(gen)
 
 print(winner)
-
-
-
-
-
-
