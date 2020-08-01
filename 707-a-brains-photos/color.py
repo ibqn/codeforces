@@ -1,12 +1,8 @@
-n, m = list(map(int, input().split()))
+n, _ = list(map(int, input().split()))
 
-def is_color():
-    for _ in range(n):
-        row = input().split()
-        gen = (c for c in row if c in 'CMY')
-        for _ in gen:
-            return True
-    return False
+gen = (c for _ in range(n) for c in input() if c in "CMY")
 
-print( "#Color" if is_color() else "#Black&White")
-
+if not list(gen):
+    print("#Black&White")
+else:
+    print("#Color")
