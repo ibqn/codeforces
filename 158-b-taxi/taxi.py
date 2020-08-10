@@ -1,11 +1,8 @@
 _ = int(input())  # n is not needed
 
-counts = {k: 0 for k in range(1, 5)}
-
 groups = list(map(int, input().split()))
 
-for g in groups:
-    counts[g] = counts.get(g, 0) + 1
+counts = {c: groups.count(c) for c in range(1, 5)}
 
 # print(counts)
 counts[1] = max(0, counts[1] - counts[3])
