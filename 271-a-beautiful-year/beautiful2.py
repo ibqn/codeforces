@@ -1,6 +1,6 @@
-yaer = int(input())
+year = int(input())
 
-answer = yaer + 1
+answer = year + 1
 while not len(set(str(answer))) == 4:
     answer += 1
 
