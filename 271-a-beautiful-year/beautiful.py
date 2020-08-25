@@ -2,7 +2,8 @@ n = int(input())
 
 
 def is_beaufiful(num):
-    vals = {v: num.count(v) == 1 for v in str(num)}
+    num = str(num)
+    vals = [num.count(v) == 1 for v in num]
     return all(vals)
 
 
