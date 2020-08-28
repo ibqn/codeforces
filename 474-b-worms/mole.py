@@ -2,7 +2,7 @@ from bisect import bisect_left
 
 n = int(input())
 
-worms = list(map(int, input().split()))
+worms = map(int, input().split())
 
 worms_count = [0]
 
@@ -13,7 +13,7 @@ for w in worms:
 
 m = int(input())
 
-juicy = list(map(int, input().split()))
+juicy = map(int, input().split())
 
 for j in juicy:
     print(bisect_left(worms_count, j))
