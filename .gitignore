@@ -1,3 +1,9 @@
 venv
 
 *.bin
+
+# hiding wip(work in progress) problems
+3-b-lorry
+466-b-wonder-room
+50-c-happy-farm-5
+50-e-square-equation-roots
