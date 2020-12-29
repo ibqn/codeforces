@@ -5,11 +5,12 @@ def sum(i, j, memo={}):
     if i == 1 or j == 1:
         return 1
 
-    if (min(i, j), max(i, j)) in memo:
-        return memo[(min(i, j), max(i, j))]
+    key = (min(i, j), max(i, j))
+    if key in memo:
+        return memo[key]
 
     val = sum(i - 1, j, memo) + sum(i, j - 1, memo)
-    memo[(min(i, j), max(i, j))] = val
+    memo[key] = val
     return val
 
 
