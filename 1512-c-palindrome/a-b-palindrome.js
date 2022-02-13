@@ -10,7 +10,7 @@ process.stdin.on("data", (inputStdin) => {
   inputString += inputStdin;
 });
 
-process.stdin.on("end", (_) => {
+process.stdin.on("end", () => {
   inputString = inputString
     .trim()
     .split("\n")
@@ -64,11 +64,12 @@ const makePalindrome = (palindrome, counts) => {
     return -1;
   }
 
-  if (counts["?"] % 2 === 0) {
-    if (counts["0"] % 2 !== 0 || counts["1"] % 2 !== 0) {
-      // console.log("error: not even");
-      return -1;
-    }
+  if (
+    counts["?"] % 2 === 0 &&
+    (counts["0"] % 2 !== 0 || counts["1"] % 2 !== 0)
+  ) {
+    // console.log("error: not even");
+    return -1;
   }
 
   counts["?"] += counts["1"] + counts["0"];
