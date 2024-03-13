@@ -7,13 +7,13 @@ Thus, a `python` based script can be launched simply by running
 python3 app.py
 ```
 
-If threre is no `makefile` present a simple `C++` application i.e. for example `app.cpp` file can be compiled with `make` command by running
+If there is no `makefile` present a simple `C++` application i.e. for example `app.cpp` file can be compiled with `make` command by running
 
 ```make
 make app
 ```
 
-If you preffer to comlile by hand, than the folloing like can be used
+If you prefer to compile by hand, than the following like can be used
 
 ```shell
 g++ app.cpp -o app -std=c++17 -Wall -Wextra -pedantic -g
