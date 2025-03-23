@@ -16,7 +16,7 @@ make app
 If you prefer to compile by hand, than the following like can be used
 
 ```shell
-g++ app.cpp -o app -std=c++17 -Wall -Wextra -pedantic -g
+g++ app.cpp -o app -std=c++23 -Wall -Wextra -pedantic -g
 ```
 
 Additionally, there might be some input file which can be used for testing purposes, named `ipunt-1`, `input-2` and etc.
