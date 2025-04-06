@@ -18,4 +18,4 @@ for _ in range(n):
     pa = prefix_sum()
     pb = prefix_sum()
 
-    print(max(0, max(pa) + max(pb)))
+    print(max(0, *pa) + max(0, *pb))
