@@ -2,6 +2,8 @@ venv
 
 *.bin
 
-# hiding wip(work in progress) problems
-50-c-happy-farm-5
-50-e-square-equation-roots
+*.dSYM
+
+.DS_Store
+
+a.out
